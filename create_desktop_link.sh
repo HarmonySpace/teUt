@@ -17,22 +17,26 @@ read CATEGORY
 # - SET VALUES
 # -- File name
 FILENAME="$NAME.desktop"
+log $md $fg "Nombre definido -> $FILENAME"
 
 # - DESKTOP LINK
 echo "[Desktop Entry]" >$FILENAME
-echo "Version=$VERSION" >>$FILENAME
+echo "Version=$CDL_VERSION" >>$FILENAME
 echo "Name=$NAME" >>$FILENAME
 echo "Comment=$COMMENT" >>$FILENAME
 echo "Exec=$EXEC" >>$FILENAME
 echo "Icon=$ICON" >>$FILENAME
-echo "Terminal=$TERMINAL" >>$FILENAME
-echo "Type=$TYPE" >>$FILENAME
+echo "Terminal=$CDL_TERMINAL" >>$FILENAME
+echo "Type=$CDL_TYPE" >>$FILENAME
 echo "Categories=$CATEGORY" >>$FILENAME
+log $md $fg "Archivo creado"
 
-#move to desktop links
+# - DESKTOP DIR
+# - Move to dir
 mv $FILENAME $HOME/.local/share/applications/$FILENAME
-
-#print final message
+log $md $fg "Archivo reubiado"
+# - Print dir and file
 color $md $sc $bg "Se ha creado el enlace de escritorio"
 ls ~/.local/share/applications | grep $FILENAME
+
 
