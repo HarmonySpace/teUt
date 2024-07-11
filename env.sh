@@ -1,13 +1,8 @@
 #!/bin/bash
+source "./utils/term_colors.sh"
 
 # enviroment vars
-
 # - COLORS
-# -- foregrounds
-fg=21
-sc=34
-# -- backgrounds
-bg=16
 # -- modifiers
 md=1
 
