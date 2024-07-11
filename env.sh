@@ -20,6 +20,7 @@ TEMP_DIR="/tmp"
 CDL_VERSION=1.0
 CDL_TYPE="Application"
 CDL_TERMINAL=false
+CDL_DIR=$HOME/.local/share/applications
 # -- Obsidian Drive Backups
 # --- Default vars
 ODB_NOTES_DIR="$(echo $HOME)/Documents/notes"

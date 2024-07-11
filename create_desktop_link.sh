@@ -33,7 +33,7 @@ log $md $fg "Archivo creado"
 
 # - DESKTOP DIR
 # - Move to dir
-mv $FILENAME $HOME/.local/share/applications/$FILENAME
+mv $FILENAME $CDL_DIR/$FILENAME
 log $md $fg "Archivo reubiado"
 # - Print dir and file
 color $md $sc $bg "Se ha creado el enlace de escritorio"
