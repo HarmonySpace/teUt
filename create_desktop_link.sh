@@ -1,6 +1,8 @@
 #!/bin/bash
 source "./env.sh"
 source "./utils/color.sh"
+source "./utils/log.sh"
+source "./utils/preview.sh"
 
 # - FORM
 color $md $fg $bg "Nombre de la aplicación"
@@ -33,10 +35,10 @@ log $md $fg "Archivo creado"
 
 # - DESKTOP DIR
 # - Move to dir
-mv $FILENAME $HOME/.local/share/applications/$FILENAME
+mv $FILENAME $CDL_DIR/$FILENAME
 log $md $fg "Archivo reubiado"
 # - Print dir and file
 color $md $sc $bg "Se ha creado el enlace de escritorio"
 ls ~/.local/share/applications | grep $FILENAME
-
+preview $CDL_DIR/$FILENAME b
 
